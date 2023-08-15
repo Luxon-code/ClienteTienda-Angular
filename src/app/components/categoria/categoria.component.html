@@ -1,0 +1,17 @@
+<div class="w-50" style="margin: 0 auto;">
+    <form [formGroup]="frmCategoria" (ngSubmit)="agregarCategoria(frmCategoria.value)">
+        <div>
+            <h3 class="text-center text-black-50"><b>Agregar Categoria</b></h3>
+        </div>
+        <div class="mb-3">
+            <label class="fw-bold" for="txtNombre">Nombre: </label>
+            <input type="text" formControlName="txtNombre" id="txtNombre" class="form-control" required>
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+            <div>
+                <button class="btn btn-success">Agregar</button>
+            </div>
+        </div>
+    </form>
+    <div class="text-center">{{mensaje}}</div>
+</div>
