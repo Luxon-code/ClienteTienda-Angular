@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+    <div class="w-50 col-md-12" id="Agregar">
+      <br />
+      <div>
+        <h3 class="text-center text-black-50">Actualizar Producto</h3>
+      </div>
+      <form [formGroup]="frmProducto" (ngSubmit)="editarProducto()"
+      enctype="multipart/form-data" class="w-50" style="margin: auto;" class="was-validated" >
+  
+        <div class="form-floating mb-3 mt-3">
+          <input type="text" name="txtCodigo" id="txtCodigo" formControlName="txtCodigo"
+          class="form-control" value="" placeholder="codigo" required />
+          <label for="txtCodigo" class="text-secondary"><small>Codigo:</small></label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="text" name="txtNombre" id="txtNombre" formControlName="txtNombre"
+          class="form-control" value=""placeholder="nombre" required />
+          <label for="txtNombre" class="text-secondary"><small>Nombre:</small></label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="number" name="txtPrecio" id="txtPrecio" formControlName="txtPrecio"
+          class="form-control" value="" placeholder="precio" required />
+          <label for="txtPrecio" class="text-secondary"><small>Precio:</small></label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <select name="cbCategoria" id="cbCategoria" class="form-select" formControlName="cbCategoria" required>
+            <option value=""><small>Seleccione</small></option>
+            <option [value]="categoria.id" *ngFor="let categoria of listaCategorias">
+              {{categoria.catNombre}}
+            </option>
+          </select>
+          <label for="cbCategoria" class=""><small>Categoría:</small></label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="file" name="fileFoto" id="fileFoto" formControlName="fileFoto"
+          class="form-control" accept=".jpg" (change)="onFileSelect($event)"/>
+          <label for="fileFoto" class="text-secondary">Foto (jpg):</label>
+        </div>
+  
+        <div class="row d-flex">
+          <div class="col text-center mb-4" *ngIf="leFoto">
+            <img [src]="leFoto" alt="" id="imagenProducto" width="100" height="100">
+            <p><small>Foto Anterior</small></p>
+          </div>
+          <div class="col text-center mb-4" *ngIf="rutaImagen">
+            <img [src]="rutaImagen" alt="" id="imagenProducto" width="100" height="100">
+            <p><small>Nueva Foto</small></p>
+          </div>
+        </div>
+  
+  
+        <div class="d-flex justify-content-center pb-4">
+          <button class="btn btn-success fw-bold text-white"><i class="fa-solid fa-pen-to-square fa-beat"></i>&nbsp; Editar</button>
+          <a href="/producto">
+            <button type="button" class="btn btn-warning mx-2 fw-bold"><i class="fa-solid fa-ban fa-beat"></i>&nbsp; Cancelar</button>
+          </a>
+          <button type="reset" class="btn btn-primary"><i class="fa-solid fa-broom fa-beat"></i>&nbsp; Limpiar</button>
+        </div>
+      </form>
+  
+      <div class="text-center fw-bold mb-4">
+        <div class="card shadow">
+          {{mensaje}}
+        </div>
+      </div>
+  
+    </div>
+  </div>

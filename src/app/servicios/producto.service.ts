@@ -26,7 +26,7 @@ export class ProductoService {
     return this.http.post(this.url, producto);
   }
 
-  editarProducto(id:string,producto:Producto):Observable<any> {
+  editarProducto(id:string,producto:any):Observable<any> {
     return this.http.put(this.url+"/"+id, producto);
   }
 }

@@ -12,7 +12,8 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { AgregarproductoComponent } from './components/agregarproducto/agregarproducto.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { EditarproductoComponent } from './components/editarproducto/editarproducto.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     PiepaginaComponent,
     CategoriaComponent,
     ProductoComponent,
-    AgregarproductoComponent
+    AgregarproductoComponent,
+    EditarproductoComponent
   ],
   imports: [
     BrowserModule,
