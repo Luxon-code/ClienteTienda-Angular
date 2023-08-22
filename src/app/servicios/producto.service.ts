@@ -6,7 +6,7 @@ import { Producto } from '../modelos/producto.model';
   providedIn: 'root'
 })
 export class ProductoService {
-  url = "http://127.0.0.1:8000/producto"
+  url = "https://josephtrujillo.pythonanywhere.com/producto"
   constructor(private http: HttpClient) { 
   }
 

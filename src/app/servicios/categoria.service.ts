@@ -6,7 +6,7 @@ import { Categoria } from '../modelos/categoria.model';
   providedIn: 'root'
 })
 export class CategoriaService {
-  url = "http://127.0.0.1:8000/categoria"
+  url = "https://josephtrujillo.pythonanywhere.com/categoria"
   constructor(private http: HttpClient) { 
   }
 

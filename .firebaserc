@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "clienteangular": {
+      "hosting": {
+        "ClienteTienda": [
+          "clienteangular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "clienteangular"
+  }
+}
